@@ -69,14 +69,4 @@ export default {
 main {
   margin-top: 8.4rem;
 }
-
-.scroll {
-  height: 60.5rem;
-  overflow: hidden;
-}
-
-.scroll .grid {
-  height: 100vh;
-  overflow-x: auto;
-}
 </style>
