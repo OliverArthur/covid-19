@@ -1,17 +1,41 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <cov-header />
+    <main>
+      <div class="container mtxxl">
+        <h2 class="heading-two">Dashboard</h2>
+      </div>
+      <cov-global-stats
+        :data="details">
+      </cov-global-stats>
+      <cov-chart
+        :object="details.stats.history">
+      </cov-chart>
+    </main>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import useCoronaVirus from '@/hooks/use-coronavirus'
+import CovHeader from '@/components/CovHeader'
+import CovGlobalStats from '@/components/CovGlobalStats'
+import CovChart from '@/components/CovChart'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    CovHeader,
+    CovGlobalStats,
+    CovChart
+  },
+  setup () {
+    const { details, error, loading, info } = useCoronaVirus()
+    return {
+      ...info(),
+      details,
+      error,
+      loading
+    }
   }
 }
 </script>
@@ -21,8 +45,10 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+main {
+  margin-top: 8.4rem;
 }
 </style>

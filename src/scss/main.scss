@@ -1,0 +1,57 @@
+html, body {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// utilities
+.box-shadow {
+  box-shadow: 0 0.2rem 0.2rem 0 rgba(0, 0, 0, 0.14), 0 0.3rem 0.1rem -0.2rem rgba(0, 0,
+  0, 0.12), 0 0.1rem 0.5rem 0 rgba(0, 0, 0, 0.2);
+}
+
+// heading
+.heading-one {
+  font-size: 3.6rem;
+}
+
+.heading-two {
+  font-size: 3.56rem;
+}
+
+.heading-three {
+  font-size: 2.4rem;
+}
+
+// layouts
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+  width: 100%;
+}
+
+// spacing
+.mt2 {
+  margin-top: 2rem;
+}
+
+.mt4 {
+  margin-top: 4rem;
+}
+
+.mtxxl {
+  margin-top: 12rem;
+}
+
+// components
+@import './grid.scss';
