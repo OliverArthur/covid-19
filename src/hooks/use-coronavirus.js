@@ -5,6 +5,7 @@ import useCoronavirusApi from '@/hooks/use-coronavirus-api'
 export default function useCoronavirus () {
   const data = reactive({
     details: [],
+    locale: [],
     error: null,
     loading: false
   })
@@ -17,8 +18,17 @@ export default function useCoronavirus () {
     data.loading = loading
   }
 
+  const infoByLocation = async (arg) => {
+    const { location, loading, error, getByLocation } = useCoronavirusApi()
+    getByLocation(arg)
+    data.locale = location
+    data.error = error
+    data.loading = loading
+  }
+
   return {
     ...toRefs(data),
+    infoByLocation,
     info
   }
 }

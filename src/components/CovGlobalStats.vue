@@ -14,7 +14,7 @@
       title="total recovered cases:"
       modifier="border-green"
       :metric="data.stats.totalRecoveredCases"
-      :new-case="`+(${data.stats.newlyRecoveredCases})`" />
+      :new-case="`(+${data.stats.newlyRecoveredCases})`" />
     <cov-card
       title="Updated at:"
       modifier="notextransform"

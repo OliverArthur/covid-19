@@ -3,7 +3,7 @@
     :class="modifier"
     class="cov-header box-shadow">
       <h1 class="cov-logo heading-three">
-        Covid-19 report
+        Covid-19 Dashboard
       </h1>
   </header>
 </template>
