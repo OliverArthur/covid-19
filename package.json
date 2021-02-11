@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@vue/composition-api": "0.5.0",
-    "apexcharts": "3.17.0",
+    "apexcharts": "3.24.0",
     "core-js": "^3.6.4",
     "dotenv": "8.2.0",
     "fusioncharts": "3.15.1-sr.1",
